@@ -3,7 +3,6 @@
 set -e
 
 scripts/build
-bundle exec jekyll build
 bundle exec htmlproofer _site \
   --disable-external \
   --check-html \
