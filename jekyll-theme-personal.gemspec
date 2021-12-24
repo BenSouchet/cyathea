@@ -24,4 +24,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "html-proofer", "~> 3.0"
   spec.add_development_dependency "rubocop-github", "~> 0.16"
+  spec.add_development_dependency "w3c_validators", "~> 1.3"
 end
