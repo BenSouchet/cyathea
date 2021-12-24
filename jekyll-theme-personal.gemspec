@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.files = `git ls-files -z`.split("\x0").select { |f| f.match(regex) }
 
   spec.required_ruby_version = ">= 2.7.3"
-  
+
   spec.platform = Gem::Platform::RUBY
   spec.add_runtime_dependency "jekyll", ">= 3.9", "< 5.0"
   spec.add_runtime_dependency "github-pages", ">= 222"
