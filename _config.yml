@@ -1,0 +1,11 @@
+title: Personal
+description: Cool theme for your Github site
+
+lang: en-US
+branch: main
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-github-metadata
+
+theme: null
