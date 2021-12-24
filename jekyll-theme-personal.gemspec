@@ -9,6 +9,8 @@ Gem::Specification.new do |spec|
   spec.summary       = "A cool Jekyll theme for your personal site"
   spec.homepage      = "https://github.com/BenSouchet/jekyll-theme-personal"
   spec.license       = "MIT"
+  
+  spec.metadata["plugin_type"] = "theme"
 
   regex      = %r{^(_includes|_layouts|_sass|assets|LICENSE|README)/i}
   spec.files = `git ls-files -z`.split("\x0").select { |f| f.match(regex) }
