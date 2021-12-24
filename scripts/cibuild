@@ -9,5 +9,5 @@ bundle exec htmlproofer _site \
   --report-missing-names \
   --report-script-embeds
 bundle exec rubocop -D --config .rubocop.yml
-bundle exec script/validate-html
+bundle exec scripts/validate-html
 gem build jekyll-theme-personal.gemspec
