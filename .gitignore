@@ -1,6 +1,8 @@
 .bundle
 .jekyll-cache
 .sass-cache
+.jekyll-metadata
 _site
+vendor
 Gemfile.lock
 *.gem
