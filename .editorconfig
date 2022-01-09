@@ -1,13 +1,13 @@
 root = true
 
 [*]
+charset = utf-8
 end_of_line = lf
 insert_final_newline = true
 
 # Matches multiple files with brace expansion notation
 [*.{js,jsx,php,htm,html,sass,scss,css}]
-charset = utf-8
-indent_style = tab
+indent_style = space
 indent_size = 4
 trim_trailing_whitespace = true
 
@@ -17,3 +17,6 @@ trim_trailing_whitespace = false
 [*.{yml,yaml}]
 indent_style = space
 indent_size = 2
+
+[*.svg]
+trim_trailing_whitespace = false
