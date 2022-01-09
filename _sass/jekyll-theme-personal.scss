@@ -2,6 +2,8 @@
 @import "rouge-github";
 @import "variables";
 
+@import "widgets/*";
+
 @mixin large {
   @media screen and (min-width: #{$large-breakpoint}) {
     @content;
