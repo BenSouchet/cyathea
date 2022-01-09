@@ -9,7 +9,9 @@ github: [metadata]
 plugins:
   - jekyll-seo-tag
   - jekyll-github-metadata
-
+sass:
+  load_paths:
+    - _sass/widgets/
 theme: null
 
 exclude:
