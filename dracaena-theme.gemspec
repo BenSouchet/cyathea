@@ -10,9 +10,11 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/BenSouchet/jekyll-theme-personal"
   spec.license       = "MIT"
 
-  spec.metadata.     = {
+  spec.metadata      = {
     "plugin_type"       => "theme",
-    "documentation_uri" => "https://github.com/BenSouchet/jekyll-theme-personal#readme"
+    "homepage_uri"      => "https://github.com/BenSouchet/dracaena-theme",
+    "source_code_uri"   => "https://github.com/BenSouchet/dracaena-theme",
+    "documentation_uri" => "https://github.com/BenSouchet/dracaena-theme#readme"
   }
 
   regex      = %r{^(_includes|_layouts|_sass|assets|LICENSE|README)/i}
