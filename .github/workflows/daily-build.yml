@@ -26,7 +26,6 @@ jobs:
         with:
           source: ./
           destination: ./_site
-          future: false
       - name: 'Archive build output'
         run: tar --dereference --hard-dereference --directory _site/ -cvf artifact.tar .
       - name: 'Upload Artifact'
