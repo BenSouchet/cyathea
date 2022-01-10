@@ -76,3 +76,6 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-github-metadata
+
+# Theme name used in the build process
+theme: cyathea
