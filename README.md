@@ -1,4 +1,18 @@
 # Cyathea Theme
 
 [![pages-build-deployment](https://github.com/BenSouchet/cyathea/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/BenSouchet/cyathea/actions/workflows/pages/pages-build-deployment)
-[![Daily Build](https://github.com/BenSouchet/cyathea/actions/workflows/daily-build.yml/badge.svg)](https://github.com/BenSouchet/cyathea/actions/workflows/daily-build.yml)
+[![daily-Build](https://github.com/BenSouchet/cyathea/actions/workflows/daily-build.yml/badge.svg)](https://github.com/BenSouchet/cyathea/actions/workflows/daily-build.yml)
+
+## Tasks
+- [x] Get the `daily-build` to work
+- [ ] Edit `default.html`
+- [ ] Create `home.html` 
+- [ ] Create `page.html`
+- [ ] Create `post.html`
+- [ ] Create `head.html`
+- [ ] Create `seo.html`
+- [ ] Migrate CSS to SCSS
+- [ ] Add media queries in SCSS
+- [ ] Handle global settings
+- [ ] Create color variantes
+- [ ] Create demo website
