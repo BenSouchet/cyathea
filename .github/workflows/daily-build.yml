@@ -1,14 +1,14 @@
 permissions:
   contents: read
   pages: write
+  deployments: write
   id-token: write
 
-name: Daily Build
+name: 'daily-build'
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow everyday
-  # DEBUG: currently every 5mins
   schedule:
     - cron: '0 9 * * *'
   workflow_dispatch:
