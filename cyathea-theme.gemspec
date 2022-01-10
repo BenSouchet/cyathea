@@ -1,20 +1,20 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = "dracaena-theme"
+  spec.name          = "cyathea-theme"
   spec.version       = "0.0.1"
   spec.authors       = ["Ben Souchet"]
   spec.email         = ["contact@bensouchet.dev"]
 
-  spec.summary       = "Dracaena is a ready-to-use Jekyll theme, perfect for personal blogs or simple project websites, with a focus on responsive and clean design."
-  spec.homepage      = "https://github.com/BenSouchet/jekyll-theme-personal"
+  spec.summary       = "Cyathea is a ready-to-use Jekyll theme, perfect for personal blogs or simple project websites, with a focus on responsive and clean design."
+  spec.homepage      = "https://github.com/BenSouchet/cyathea"
   spec.license       = "MIT"
 
   spec.metadata      = {
     "plugin_type"       => "theme",
-    "homepage_uri"      => "https://github.com/BenSouchet/dracaena-theme",
-    "source_code_uri"   => "https://github.com/BenSouchet/dracaena-theme",
-    "documentation_uri" => "https://github.com/BenSouchet/dracaena-theme#readme"
+    "homepage_uri"      => "https://github.com/BenSouchet/cyathea",
+    "source_code_uri"   => "https://github.com/BenSouchet/cyathea",
+    "documentation_uri" => "https://github.com/BenSouchet/cyathea#readme"
   }
 
   regex      = %r{^(_includes|_layouts|_sass|assets|LICENSE|README)/i}
@@ -28,7 +28,4 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "github-pages", ">= 222"
   spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.0"
 
-  spec.add_development_dependency "html-proofer", "~> 3.0"
-  spec.add_development_dependency "rubocop-github", "~> 0.16"
-  spec.add_development_dependency "w3c_validators", "~> 1.3"
 end
