@@ -1,6 +1,0 @@
-language: ruby
-cache: bundler
-rvm: 2.7.3
-
-install: scripts/bootstrap
-script: scripts/cibuild
