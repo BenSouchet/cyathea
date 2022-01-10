@@ -1,7 +1,6 @@
 permissions:
   contents: read
   pages: write
-  deployments: write
   id-token: write
 
 name: 'daily-build'
