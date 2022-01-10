@@ -10,7 +10,8 @@ on:
   # Triggers the workflow everyday
   # DEBUG: currently every 5mins
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
 
 # Workflow with two jobs: "Build" then "Deploy"
 jobs:
