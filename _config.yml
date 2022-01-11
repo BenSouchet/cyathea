@@ -17,6 +17,12 @@ timezone: "Europe/Paris"
 # The branch where the 
 branch: main
 
+collections:
+  pages:
+    output: true
+    permalink: /:name
+    sort_by: page_index
+
 # Ensure the encoding is UTF-8.
 encoding: utf-8
 
