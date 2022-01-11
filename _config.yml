@@ -36,6 +36,8 @@ github: [metadata]
 # Use "expanded" for easy CSS debugging
 # and "compressed" otherwise.
 sass:
+  load_paths:
+    - /assets/css/
   style: expanded
 
 # Pagination parameters
