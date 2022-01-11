@@ -1,2 +1,7 @@
 @use 'skin/common' as skin;
 @use 'variables' as vars;
+
+
+html, body {
+    background-color: skin.$clr-primary;
+}
