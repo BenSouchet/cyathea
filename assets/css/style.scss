@@ -1,4 +1,10 @@
 ---
 ---
 
-@use 'cyathea';
+@charset "utf-8";
+
+// Import the skin
+@import "/skins/{{ site.skin | default: 'default' }}";
+
+// Use the style
+@use "cyathea";
