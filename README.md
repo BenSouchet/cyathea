@@ -6,6 +6,7 @@
 ## Tasks
 - [x] Get the `daily-build` to work
 - [ ] Edit `default.html`
+- [ ] Navigation [see help](https://jekyllrb.com/tutorials/navigation/#scenario-8-retrieving-items-based-on-front-matter-properties)
 - [ ] Create `home.html` 
 - [ ] Create `page.html`
 - [ ] Create `post.html`
