@@ -1,0 +1,13 @@
+// Color palette, variation of $clr-primary.
+// Function scale-color(...) is only available in Dart Sass (know as sass-embedded in Jekyll)
+
+// If you use create a new skin you can set the variables in your file.
+// Of course the variables names need to be the same.
+
+$clr-primary-l50: scale-color($clr-primary, $saturation: 20%,  $lightness: 50%)  !default;
+$clr-primary-l50-o08:change-color($clr-primary-l50, $alpha: .8) !default;
+$clr-primary-l80: scale-color($clr-primary, $saturation: 20%,  $lightness: 80%)  !default;
+$clr-primary-d20: scale-color($clr-primary, $saturation: -10%, $lightness: -15%) !default;
+$clr-primary-d20-o0: change-color($clr-primary-d20, $alpha: 0) !default;
+$clr-primary-d30: scale-color($clr-primary, $saturation: -10%, $lightness: -30%) !default;
+$clr-primary-d50: scale-color($clr-primary, $saturation: -10%, $lightness: -50%) !default;
