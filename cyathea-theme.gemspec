@@ -24,8 +24,7 @@ Gem::Specification.new do |spec|
 
   spec.platform = Gem::Platform::RUBY
   spec.add_runtime_dependency "jekyll", ">= 3.9", "< 5.0"
-  spec.add_runtime_dependency "jekyll-paginate", "~> 1.1"
-  spec.add_runtime_dependency "github-pages", ">= 222"
-  spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.0"
+  spec.add_runtime_dependency "github-pages", ">= 223"
+  spec.add_runtime_dependency "jekyll-include-cache", ">= 0.2"
 
 end
