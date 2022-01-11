@@ -6,3 +6,4 @@ gemspec
 gem "github-pages", group: :jekyll_plugins
 gem "jekyll-github-metadata"
 gem "jekyll-paginate"
+gem 'sass-embedded'
