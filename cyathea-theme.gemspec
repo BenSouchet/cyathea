@@ -26,5 +26,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll", ">= 3.9", "< 5.0"
   spec.add_runtime_dependency "github-pages", ">= 223"
   spec.add_runtime_dependency "jekyll-include-cache", ">= 0.2"
+  spec.add_runtime_dependency "sass-embedded", ">= 0.9"
 
 end
