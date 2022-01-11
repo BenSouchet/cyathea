@@ -37,7 +37,7 @@ github: [metadata]
 # and "compressed" otherwise.
 sass:
   load_paths:
-    - /assets/css/
+    - /assets/css/custom.scss
   style: expanded
 
 # Pagination parameters
