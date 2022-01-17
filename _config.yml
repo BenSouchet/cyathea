@@ -36,7 +36,6 @@ github: [metadata]
 # Use "expanded" for easy CSS debugging
 # and "compressed" otherwise.
 sass:
-  implementation: sass-embedded
   style: expanded
 
 # Pagination parameters
