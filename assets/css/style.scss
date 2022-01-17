@@ -7,11 +7,23 @@
 // Import the skin colors variables
 @import "skins/{{ site.skin | default: 'caribbean_green' }}";
 
+
+test {
+    color: green;
+}
 // All the styles of the theme
 @import "cyathea";
+span {
+    color: yellow;
+}
 
 // User custom styles
 @import "custom";
 
-
+section {
+    color: black;
+}
 @import url("test.scss");
+pre {
+    color: grey;
+}
