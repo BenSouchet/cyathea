@@ -1,29 +1,26 @@
 ---
-# test
 ---
-
 @charset "utf-8";
 
 // Import the skin colors variables
 @import "skins/{{ site.skin | default: 'caribbean_green' }}";
 
+// Variables
+$val-body-padding: {{ site.style_body_padding | default: 40px }};
+//$val-left-column-width: 180px !default;
+//$val-border-size: 4px !default;
+//$val-element-gap: 30px !default;
+//$val-rounded-corner: 14px !default;
+//$val-header-drop-shadow: 0.125rem !default;
+//$val-nav-gradient-angle: 205deg !default;
+//$val-side-nav-gradient-angle: 205deg !default;
 
-test {
-    color: green;
-}
 // All the styles of the theme
 @import "cyathea";
-span {
-    color: yellow;
+
+body {
+    padding: $val-body-padding;
 }
 
 // User custom styles
 @import "custom";
-
-section {
-    color: black;
-}
-pre {
-    color: grey;
-}
-@import url("test.css");
