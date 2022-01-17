@@ -6,21 +6,17 @@
 @import "skins/{{ site.skin | default: 'caribbean_green' }}";
 
 // Variables
-$val-body-padding: {{ site.style_body_padding | default: '40px' }};
-//$val-left-column-width: 180px !default;
-//$val-border-size: 4px !default;
-//$val-element-gap: 30px !default;
-//$val-rounded-corner: 14px !default;
-//$val-header-drop-shadow: 0.125rem !default;
-//$val-nav-gradient-angle: 205deg !default;
-//$val-side-nav-gradient-angle: 205deg !default;
+$val-body-padding:            {{ site.style_body_padding            | default: '40px' }};
+$val-left-column-width:       {{ site.style_left_column_width       | default: '180px' }};
+$val-border-size:             {{ site.style_border_size             | default: '4px' }};
+$val-element-gap:             {{ site.style_element_gap             | default: '30px' }};
+$val-rounded-corner:          {{ site.style_rounded_corner_value    | default: '14px' }};
+$val-header-drop-shadow:      {{ site.style_header_drop_shadow_size | default: '0.125rem' }};
+$val-nav-gradient-angle:      {{ site.style_nav_gradient_angle      | default: '205deg' }};
+$val-side-nav-gradient-angle: {{ site.style_side_nav_gradient_angle | default: '205deg' }};
 
 // All the styles of the theme
 @import "cyathea";
-
-body {
-    padding: $val-body-padding;
-}
 
 // User custom styles
 @import "custom";
