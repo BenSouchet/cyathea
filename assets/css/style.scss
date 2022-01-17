@@ -5,7 +5,7 @@
 @charset "utf-8";
 
 // Import the skin
-@use "skins/{{ site.skin | default: 'caribbean_green' }}" as skin;
+@import "skins/{{ site.skin | default: 'caribbean_green' }}";
 
 // Use the style
-@use "cyathea";
+@import "cyathea";
