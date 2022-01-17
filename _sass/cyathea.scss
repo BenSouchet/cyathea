@@ -1,7 +1,7 @@
-@use 'skin/common' as skin;
-@use 'variables' as vars;
+@import 'skin/common';
+@import 'variables';
 
 
 html, body {
-    background-color: skin.$clr-primary;
+    background-color: $clr-primary;
 }
