@@ -6,7 +6,7 @@
 @import "skins/{{ site.skin | default: 'caribbean_green' }}";
 
 // Variables
-$val-body-padding: {{ site.style_body_padding | default: 40px }};
+$val-body-padding: {{ site.style_body_padding | default: '40px' }};
 //$val-left-column-width: 180px !default;
 //$val-border-size: 4px !default;
 //$val-element-gap: 30px !default;
