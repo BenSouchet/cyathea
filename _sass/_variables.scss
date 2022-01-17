@@ -1,8 +1,12 @@
-$val-body-padding: 40px;
-$val-left-column-width: 180px;
-$val-border-size: 4px;
-$val-element-gap: 30px;
-$val-rounded-corner: 14px;
-$val-header-drop-shadow: 0.125rem;
-$val-nav-gradient-angle: 205deg;
-$val-side-nav-gradient-angle: 205deg;
+// Import color variables
+@import "skin/common";
+
+// Declare and set default values for variables
+$val-body-padding: 40px !default;
+$val-left-column-width: 180px !default;
+$val-border-size: 4px !default;
+$val-element-gap: 30px !default;
+$val-rounded-corner: 14px !default;
+$val-header-drop-shadow: 0.125rem !default;
+$val-nav-gradient-angle: 205deg !default;
+$val-side-nav-gradient-angle: 205deg !default;
