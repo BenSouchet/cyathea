@@ -7,14 +7,8 @@
 // Import the skin colors variables
 @import "skins/{{ site.skin | default: 'caribbean_green' }}";
 
-// Import the themes colors variables
-@import "themes";
-
 // All the styles of the theme
 @import "cyathea";
 
 // User custom styles
 @import "custom";
-
-// Import all the Sass variables
-@import "variables";
