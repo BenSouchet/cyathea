@@ -22,10 +22,18 @@ $val-header-drop-shadow:      {{ site.style_header_drop_shadow_size | default: '
 $val-nav-gradient-angle:      {{ site.style_nav_gradient_angle      | default: '205deg' }};
 $val-side-nav-gradient-angle: {{ site.style_side_nav_gradient_angle | default: '205deg' }};
 
+// Add Fonts CSS rules (only if requested)
+{% if site.font_family_main == "Source Sans 3" or site.font_family_main_variable == "Source Sans 3 VF" %}
+@import "fonts/sourcesans3";
+{% endif %}
+{% if site.use_fontawesomme == true %}
+@import "fonts/fontawesome";
+{% endif %}
+
 // Theme
 @import "cyathea";
 
-// Only add background pattern if defined
+// Add background pattern CSS rules (only if defined)
 {% if site.path_background_pattern %}
 html {
   background-image: url({{ site.path_background_pattern }});
