@@ -10,7 +10,7 @@ $font-family-body:            {{ site.font_family_body              | default: '
 $font-family-body-variable:   {{ site.font_family_body_variable     | default: site.font_family_body | default: 'Helvetica' }};
 $font-family-code:            {{ site.font_family_code              | default: 'Monaco' }};
 
-$path_profile_image:          {{ site.path_profile_image            | default: '../images/default/profile_image.jpg' }};
+$path_profile_imag2e:          {{ site.path_profile_image            | default: '../images/default/profile_image.jpg' }};
 
 $val-body-padding:            {{ site.style_body_padding            | default: '40px' }};
 $val-content-padding:         {{ site.style_content_padding         | default: '25px' }};
