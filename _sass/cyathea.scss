@@ -1,6 +1,12 @@
-@import "source_sans_3";
+// Font-face rules
+@import "source-sans-3";
+// Skin color variables
 @import "skins/common";
+// Themes (light, dark, ...)
 @import "themes";
+// Normalization between browsers
+@import "normalize";
+// CSS rules for default HTML components
 @import "global";
 
 html {
