@@ -10,7 +10,10 @@ $font-family-body:            {{ site.font_family_body              | default: '
 $font-family-body-variable:   {{ site.font_family_body_variable     | default: site.font_family_body | default: 'Helvetica' }};
 $font-family-code:            {{ site.font_family_code              | default: 'Monaco' }};
 
+$path_profile_image:          {{ site.path_profile_image            | default: '../images/default/profile_image.jpg' }};
+
 $val-body-padding:            {{ site.style_body_padding            | default: '40px' }};
+$val-content-padding:         {{ site.style_content_padding         | default: '25px' }};
 $val-left-column-width:       {{ site.style_left_column_width       | default: '180px' }};
 $val-border-size:             {{ site.style_border_size             | default: '4px' }};
 $val-element-gap:             {{ site.style_element_gap             | default: '30px' }};
@@ -19,8 +22,17 @@ $val-header-drop-shadow:      {{ site.style_header_drop_shadow_size | default: '
 $val-nav-gradient-angle:      {{ site.style_nav_gradient_angle      | default: '205deg' }};
 $val-side-nav-gradient-angle: {{ site.style_side_nav_gradient_angle | default: '205deg' }};
 
-// All the styles of the theme
+// Theme
 @import "cyathea";
+
+// Only add background pattern if defined
+{% if site.path_background_pattern %}
+html {
+  background-image: url({{ site.path_background_pattern }});
+  background-position: center top;
+  background-repeat: {{ site.background_pattern_repeat | default: 'repeat-x' }};
+}
+{% endif %}
 
 // User custom styles
 @import "custom";
