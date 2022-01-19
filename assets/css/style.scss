@@ -6,8 +6,8 @@
 @import "skins/{{ site.skin | default: 'caribbean_green' }}";
 
 // Variables
-$font-family-body:            {{ site.font_family_body              | default: 'Source Sans 3' }};
-$font-family-body-variable:   {{ site.font_family_body_variable     | default: site.font_family_body | default: 'Source Sans 3 VF' }};
+$font-family-body:            {{ site.font_family_main              | default: 'Source Sans 3' }};
+$font-family-body-variable:   {{ site.font_family_main_variable     | default: site.font_family_main | default: 'Source Sans 3 VF' }};
 $font-family-code:            {{ site.font_family_code              | default: 'Monaco' }};
 
 $path_profile_image:          "{{ site.path_profile_image            | default: '../images/default/profile_image.jpg' }}";
