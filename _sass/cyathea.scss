@@ -121,6 +121,7 @@ header {
         display: block;
         width: auto;
         height: auto;
+        background: url(#{$path_profile_image}) left top/cover no-repeat;
         box-shadow: 0 $val-border-size 0 0 $clr-primary-d20;
         border-radius: 0 $border-radius $border-radius;
         box-sizing: border-box;
