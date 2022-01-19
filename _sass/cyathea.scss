@@ -106,7 +106,7 @@ header {
     border-radius: 0 $val-rounded-corner 0 0;
     border: $val-border-size solid $clr-border;
     border-bottom-width: 0;
-    $gradient-angle: calc(360deg - ($val-left-nav-gradient-angle - 180deg));
+    $gradient-angle: calc(360deg - ($val-side-nav-gradient-angle - 180deg));
     background: linear-gradient($gradient-angle, $clr-primary 10%, $clr-primary-d20 100%);
     a {
         display: block;
@@ -163,7 +163,7 @@ nav {
     grid-row: 3;
     padding: 1rem 0.5rem .5rem;
     border-radius: 0 0 $val-rounded-corner $val-rounded-corner;
-    background: linear-gradient($val-left-nav-gradient-angle, $clr-primary 10%, $clr-primary-d20 100%);
+    background: linear-gradient($val-side-nav-gradient-angle, $clr-primary 10%, $clr-primary-d20 100%);
     align-self: start;
     border: $val-border-size solid $clr-border;
     border-top-width: 0;
