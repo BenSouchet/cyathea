@@ -6,6 +6,10 @@
 @import "skins/{{ site.skin | default: 'caribbean_green' }}";
 
 // Variables
+$font-family-body:            {{ site.font_family_body              | default: 'Helvetica' }};
+$font-family-body-variable:   {{ site.font_family_body_variable     | default: site.font_family_body | default: 'Helvetica' }};
+$font-family-code:            {{ site.font_family_code              | default: 'Monaco' }};
+
 $val-body-padding:            {{ site.style_body_padding            | default: '40px' }};
 $val-left-column-width:       {{ site.style_left_column_width       | default: '180px' }};
 $val-border-size:             {{ site.style_border_size             | default: '4px' }};
