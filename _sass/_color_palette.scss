@@ -3,15 +3,15 @@
 
 // Dictionary valid color names & values
 // "error" is only used in case an invalid color name is defined
-$clr_primary_values: ("default": #1FD3A2,
+$clr_primary_values: ("default": #00FF00,
                       "caribbean_green": #1FD3A2,
                       "error": #FF0000);
 
 // Retrieve primary color
-@if variable-exists($value_clr_primary) {
+@if variable-exists("value_clr_primary") {
   // Color value defined
   $clr-primary: $value_clr_primary;
-} @else if variable-exists($name_clr_primary) {
+} @else if variable-exists("name_clr_primary") {
   // Color name defined, now check validity
   @if map-has-key($clr_primary_values, $name_clr_primary) {
     // Color value can be retrieve from name
