@@ -1,33 +1,124 @@
-# This config file is essential 
-title: My Website
-description: Cool theme for your Github site
+# For full documentation on every settings check the wiki
+# TODO WIKI (THEN ADD URL HERE)
 
-# Before changing the lang parameter, ensure you new value is valid with:
+# --------------------------- #
+# --------- GENERAL --------- #
+# Site title
+title: Cyathea Theme
+
+# Desciption (currently not used)
+description: Create your personal website in 2mins (and it's free)
+
+# Set the main language you will use
+# Before changing value ensure it's valid with:
 # https://schneegans.de/lv/
 lang: en-US
 
+# This is highly important to ensure all elements will works as expected
+# It's TZ format, the list of all available values can be found at:
+# https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: 'Europe/Paris'
+
+# Activate the ability to publish posts or collection documents with a future date
+future: true
+
 # Permalink structure
-# https://github.com/mojombo/jekyll/wiki/Permalinks
+# https://jekyllrb.com/docs/permalinks/
 permalink: /:categories/:title/
 
-# Using TZ format, the list of all available values can be found at:
-# https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone: "Europe/Paris"
+# --------------------------- #
+# ---------- SKIN ----------- #
 
-# The branch where the 
+# Name of the primary color, built-in color names are:
+# caribbean_green
+# /!\ If you enter an invalid color name, the primary color will be set to full RED
+primary_color_name: caribbean_green
+
+# Optional: You can specify your own primary color value
+# Specifying a custom value will ignore 'primary_color_name'
+#primary_color_value: #1FD3A2
+
+# To see preview of the differents built-in colors check the wiki:
+# TODO WIKI (THEN ADD URL HERE)
+
+# Specify which color scheme you want to use, built-in color schemes are:
+# light, dark, white, black
+color_scheme: dark
+# You can create you own color scheme and use it, check the wiki:
+# TODO WIKI (THEN ADD URL HERE)
+
+# To let the viewer configuration to determine the color scheme
+# Browsers currently supported values : light & dark
+# Activating this module will ignore the 'color_scheme' your declared
+use_module_auto_color_scheme: true
+
+# Module only available if you enabled 'use_module_auto_color_scheme'
+# This module display a switch button on the right of the footer section,
+# With this switch you can select between the light and dark color scheme
+use_module_color_scheme_switch: true
+
+# --------------------------- #
+# ---------- FONTS ---------- #
+
+# Primary font family
+font_family_main: Source Sans 3
+# Optional: Specify the variable font family name (will be used on compatible browsers)
+font_family_main_variable: Source Sans 3 VF
+# Font family used for code formatting on HTML tags (<pre>, <code>, <kbd>, <samp>)
+font_family_code: Monaco
+# Enable Font Awesome (Boolean)
+use_fontawesome: true
+
+# For more info on how to add custom fonts (static, Google fonts, ...) check the wiki:
+# TODO WIKI (THEN ADD URL HERE)
+
+# --------------------------- #
+# ---------- IMAGES --------- #
+
+# Path to the profile image
+# Can be an absolute path or a relative path (relative to the './assets/css/' folder)
+# The default value is the owner github profile picture
+path_profile_image: ../images/default/profile_image.jpg
+
+# Optional: Path to a background pattern image
+path_background_pattern: ../images/default/dots_pattern.png
+# Define the repeat mode of the pattern image
+# Default value: repeat
+background_pattern_repeat: repeat-x
+
+# --------------------------- #
+# ----- AVANCED STYLING ----- #
+
+# These settings allow you to quickly edit the theme without touching a line of CSS
+#style_body_padding
+#style_content_padding
+#style_left_column_width
+#style_border_size
+#style_element_gap
+#style_rounded_corner_value
+#style_header_drop_shadow_size
+#style_nav_gradient_angle
+#style_side_nav_gradient_angle
+
+# --------------------------- #
+# ----- AVANCED CONFIG ------ #
+
+# Be carefull with the settings below,
+# with incorrect values you will break some functionnalities
+
+# Ensure the encoding is UTF-8
+encoding: utf-8
+
+# The source branch used to build your website
+# Old repository need 'master' instead of 'main'
 branch: main
 
+# Pages settings
 collections:
   pages:
     output: true
     permalink: /:name
     sort_by: page_index
-
-# Ensure the encoding is UTF-8.
-encoding: utf-8
-
-# Ability to publish posts or collection documents with a future date.
-future: true
 
 # Ensure that metadata will be available at site level.
 github: [metadata]
@@ -37,10 +128,6 @@ github: [metadata]
 # and "compressed" otherwise.
 sass:
   style: expanded
-
-# Pagination parameters
-paginate: 10
-paginate_path: /page:num/
 
 # Code highligther
 highlighter: rouge
@@ -79,8 +166,6 @@ exclude:
 
 # Jekyll plugins used by the theme
 plugins:
-  - jekyll-paginate
-  - jekyll-seo-tag
   - jekyll-github-metadata
 
 # Parent theme used in the build process

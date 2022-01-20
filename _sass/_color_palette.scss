@@ -1,0 +1,34 @@
+// If you want to create a fully customize color palette check:
+// TODO WIKI (THEN ADD URL HERE)
+
+// Dictionary valid color names & values
+// "error" is only used in case an invalid color name is defined
+$clr_primary_values: ("default": #1FD3A2,
+                      "caribbean_green": #1FD3A2,
+                      "error": #FF0000);
+
+// Retrieve primary color
+@if variable-exists($value_clr_primary) {
+  // Color value defined
+  $clr-primary: $value_clr_primary;
+} @else if variable-exists($name_clr_primary) {
+  // Color name defined, now check validity
+  @if map.has-key($clr_primary_values, $name_clr_primary) {
+    // Color value can be retrieve from name
+    $clr-primary: map.get($clr_primary_values, $name_clr_primary);
+  } @else {
+    // Invalid color name defined, use "error" primary color
+    $clr-primary: map.get($clr_primary_values, "error");
+  }
+} @else {
+  // Nothing defined, use the default primary color
+  $clr-primary: map.get($clr_primary_values, "default");
+}
+
+$clr-primary-l50: scale-color($clr-primary, $saturation: 20%, $lightness: 50%);
+$clr-primary-l50-o08:change-color($clr-primary-l50, $alpha: .8);
+$clr-primary-l80: scale-color($clr-primary, $saturation: 20%, $lightness: 80%);
+$clr-primary-d20: scale-color($clr-primary, $saturation: -10%, $lightness: -15%);
+$clr-primary-d20-o0: change-color($clr-primary-d20, $alpha: 0);
+$clr-primary-d30: scale-color($clr-primary, $saturation: -10%, $lightness: -30%);
+$clr-primary-d50: scale-color($clr-primary, $saturation: -10%, $lightness: -50%);

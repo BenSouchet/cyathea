@@ -2,15 +2,20 @@
 ---
 @charset "utf-8";
 
-// Import the skin colors variables
-@import "skins/{{ site.skin | default: 'caribbean_green' }}";
+// Set primary color variable if defined
+{% if site.primary_color_value %}
+$value_clr_primary: {{ site.primary_color_value }};
+{% elsif site.primary_color_name %}
+$name_clr_primary: {{ site.primary_color_name }};
+{% endif %}
 
 // Variables
 $font-family-body:            {{ site.font_family_main              | default: 'Source Sans 3' }};
 $font-family-body-variable:   {{ site.font_family_main_variable     | default: site.font_family_main | default: 'Source Sans 3 VF' }};
 $font-family-code:            {{ site.font_family_code              | default: 'Monaco' }};
 
-$path_profile_image:          "{{ site.path_profile_image            | default: '../images/default/profile_image.jpg' }}";
+$path_profile_image:          "{{ site.github.owner_gravatar_url }}";
+//$path_profile_image:          "{{ site.path_profile_image           | default: '../images/default/profile_image.jpg' }}";
 
 $val-body-padding:            {{ site.style_body_padding            | default: '40px' }};
 $val-content-padding:         {{ site.style_content_padding         | default: '25px' }};

@@ -1,7 +1,7 @@
 // Skin color variables
-@import "skins/common";
-// Themes (light, dark, ...)
-@import "themes";
+@import "color_palette";
+// Schemes (light, dark, ...)
+@import "color_schemes";
 // Normalization between browsers
 @import "normalize";
 // CSS rules for default HTML components
