@@ -31,7 +31,7 @@ $val-side-nav-gradient-angle: {{ site.style_side_nav_gradient_angle | default: '
 {% if site.font_family_main == "Source Sans 3" or site.font_family_main_variable == "Source Sans 3 VF" %}
 @import "fonts/sourcesans3";
 {% endif %}
-{% if site.use_fontawesomme == true %}
+{% if site.use_fontawesome == true %}
 @import "fonts/fontawesome";
 {% endif %}
 
