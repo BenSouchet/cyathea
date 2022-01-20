@@ -41,7 +41,12 @@ $val-side-nav-gradient-angle: {{ site.style_side_nav_gradient_angle | default: '
 // Add background pattern CSS rules (only if defined)
 {% if site.path_background_pattern %}
 html {
-  background-image: url({{ site.path_background_pattern }});
+  //background-image: url({{ site.path_background_pattern }});
+  background-image: url("../images/dracaufeu.png");
+  /* Chrome/Edge/Opera/Samsung, Safari will fallback to this as well */
+  background-image: -webkit-image-set(url("../images/dracaufeu.png") 1x, url("../images/pikachu.png") 2x);
+  /* Standard use */
+  background-image: image-set("../images/dracaufeu.png" 1x, "../images/pikachu.png" 2x);
   background-position: center top;
   background-repeat: {{ site.background_pattern_repeat | default: 'repeat-x' }};
 }
