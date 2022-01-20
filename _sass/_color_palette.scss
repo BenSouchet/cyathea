@@ -26,9 +26,9 @@ $clr-primary: map-get($clr_primary_values, "default");
 }
 
 $clr-primary-l50: scale-color($clr-primary, $saturation: 20%, $lightness: 50%);
-$clr-primary-l50-o08:change-color($clr-primary-l50, $alpha: .8);
+$clr-primary-l50-o08:change-color($clr-primary-l50, $alpha: .08);
 $clr-primary-l80: scale-color($clr-primary, $saturation: 20%, $lightness: 80%);
 $clr-primary-d20: scale-color($clr-primary, $saturation: -10%, $lightness: -15%);
-$clr-primary-d20-o0: change-color($clr-primary-d20, $alpha: 0);
+$clr-primary-d20-o00: change-color($clr-primary-d20, $alpha: 0);
 $clr-primary-d30: scale-color($clr-primary, $saturation: -10%, $lightness: -30%);
 $clr-primary-d50: scale-color($clr-primary, $saturation: -10%, $lightness: -50%);
