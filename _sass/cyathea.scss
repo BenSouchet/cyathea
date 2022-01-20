@@ -57,19 +57,19 @@ blockquote {
 #skip-to-content,
 #skip-to-navigation {
   position: absolute;
-  left: calc($val-body-padding + $val-border-size);
+  left: calc(#{$val-body-padding} + #{$val-border-size});
   padding: .25rem 0 .375rem;
-  width: calc($val-left-column-width - (2 * $val-border-size));
+  width: calc(#{$val-left-column-width} - (2 * #{$val-border-size}));
   text-align: center;
   box-sizing: border-box;
   font-size: .9em;
   border-radius: 0 0 $val-rounded-corner $val-rounded-corner;
   background-color: $clr-content-bg;
   border-top-width: 0;
-  transform: translateY(calc(-1 * (100% + $val-body-padding)));
+  transform: translateY(calc(-1 * (100% + #{$val-body-padding})));
   transition: transform 325ms ease-in-out;
   &:focus {
-    transform: translateY(calc(-1 * $val-body-padding));
+    transform: translateY(calc(-1 * #{$val-body-padding}));
   }
 }
 header {
@@ -110,7 +110,7 @@ header {
   border-radius: 0 $val-rounded-corner 0 0;
   border: $val-border-size solid $clr-border;
   border-bottom-width: 0;
-  $gradient-angle: calc(360deg - ($val-side-nav-gradient-angle - 180deg));
+  $gradient-angle: calc(360deg - (#{$val-side-nav-gradient-angle} - 180deg));
   background: linear-gradient($gradient-angle, $clr-primary 10%, $clr-primary-d20 100%);
   a {
     display: block;
@@ -121,7 +121,7 @@ header {
     background: radial-gradient(circle, $clr-primary-d20 80%, $clr-primary-d20-o0 100%);
   }
   svg {
-    $border-radius: calc($val-rounded-corner - $val-border-size);
+    $border-radius: calc(#{$val-rounded-corner} - #{$val-border-size});
     display: block;
     width: auto;
     height: auto;
@@ -188,7 +188,7 @@ nav {
         width: 100%;
         font-weight: 600;
         box-sizing: border-box;
-        border-radius: 0 calc($val-rounded-corner - .5rem) calc($val-rounded-corner - .5rem);
+        border-radius: 0 calc(#{$val-rounded-corner} - .5rem) calc(#{$val-rounded-corner} - .5rem);
         padding: .5rem .5rem .5rem 1rem;
         color: $clr-primary-l80;
         background-color: $clr-primary-l50-o08;
