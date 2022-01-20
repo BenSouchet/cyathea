@@ -7,22 +7,22 @@ $clr_primary_values: ("default": #00FF00,
                       "caribbean_green": #1FD3A2,
                       "error": #FF0000);
 
+// Set the default value of the primary color
+$clr-primary: map-get($clr_primary_values, "default");
+
 // Retrieve primary color
 @if variable-exists("value_clr_primary") {
   // Color value defined
-  $clr-primary: $value_clr_primary;
+  $clr-primary: $value_clr_primary !global;
 } @else if variable-exists("name_clr_primary") {
   // Color name defined, now check validity
   @if map-has-key($clr_primary_values, $name_clr_primary) {
     // Color value can be retrieve from name
-    $clr-primary: map-get($clr_primary_values, $name_clr_primary);
+    $clr-primary: map-get($clr_primary_values, $name_clr_primary) !global;
   } @else {
     // Invalid color name defined, use "error" primary color
-    $clr-primary: map-get($clr_primary_values, "error");
+    $clr-primary: map-get($clr_primary_values, "error") !global;
   }
-} @else {
-  // Nothing defined, use the default primary color
-  $clr-primary: map-get($clr_primary_values, "default");
 }
 
 $clr-primary-l50: scale-color($clr-primary, $saturation: 20%, $lightness: 50%);
