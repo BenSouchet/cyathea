@@ -1,6 +1,8 @@
 ---
 layout: default
+subtitle: Here start the fun (maybe)
 ---
+# My website !!!
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
