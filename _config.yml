@@ -168,7 +168,7 @@ exclude:
 
 # Jekyll plugins used by the theme
 plugins:
-  - jekyll-github-metadata
+  - "jekyll-github-metadata"
 
 # Parent theme used in the build process
 theme: null

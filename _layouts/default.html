@@ -13,9 +13,7 @@
     <link href="{{ '/assets/fonts/fontawesome/fa-regular-400.woff2' | relative_url }}" rel="preload" as="font" type="font/woff2" crossOrigin="anonymous">
     <link href="{{ '/assets/fonts/fontawesome/fa-solid-900.woff2' | relative_url }}" rel="preload" as="font" type="font/woff2" crossOrigin="anonymous">
     {% endif %}
-    {% assign stylesheet_path = '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url %}
-    <link href="{{ stylesheet_path }}" rel="stylesheet preload prefetch" as="style" type="text/css">
-    <!--<link rel="stylesheet" href="{{ stylesheet_path }}">-->
+    <link href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" rel="stylesheet preload prefetch" as="style" type="text/css">
     {% include head-custom.html %}
   </head>
   <body>
