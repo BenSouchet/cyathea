@@ -82,6 +82,8 @@ path_profile_image: ../images/default/profile_image.jpg
 
 # Optional: Path to a background pattern image
 path_background_pattern: ../images/default/dots_pattern.png
+# You can also add a high resolution version of the pattern
+path_background_pattern_highres: ../images/default/dots_pattern_x2.png
 # Define the repeat mode of the pattern image
 # Default value: repeat
 background_pattern_repeat: repeat-x
