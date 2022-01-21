@@ -122,9 +122,6 @@ collections:
     permalink: /:name
     sort_by: page_index
 
-# Ensure that metadata will be available at site level.
-#github: [metadata]
-
 # Sass/SCSS parameters
 # Use "expanded" for easy CSS debugging
 # and "compressed" otherwise.
