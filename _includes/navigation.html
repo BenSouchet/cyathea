@@ -1,0 +1,9 @@
+<nav id="navigation" role="navigation" aria-label="Main">
+	<ul>
+		{% if page.nav_item == "Home" %}<li class="current-page">{% else %}<li>{% endif %}<a href="{{ '/' | relative_url }}" aria-current="page"><i class="fas fa-home fa-fw"></i><span>Home</span></a></li>
+		{% assign pages = site.pages | sort:"nav_page_index" %}
+		{% for page_data in pages %}
+		{% if page.nav_item == page_data.nav_item %}<li class="current-page">{% else %}<li>{% endif %}<a href="{{ page_data.url }}"><i class="{{ page_data.nav_fa_icon }} fa-fw" aria-hidden="true"></i><span>{{ page_data.nav_item }}</span></a></li>
+		{% endfor %}
+	</ul>
+</nav>

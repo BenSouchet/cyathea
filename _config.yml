@@ -9,6 +9,11 @@ title: Cyathea Theme
 # Desciption (currently not used)
 description: Create your personal website in 2mins (and it's free)
 
+# Set the author name (a person, group, company, ...)
+# This is used in the footer for the copyright
+# By default if the value isn't specified the theme use the owner of the repository
+#author: John Doe
+
 # Set the main language you will use
 # Before changing value ensure it's valid with:
 # https://schneegans.de/lv/
@@ -18,6 +23,27 @@ lang: en-US
 # It's TZ format, the list of all available values can be found at:
 # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone: 'Europe/Paris'
+
+# Date format that will be diplayed on metadata, default is DD/MM/YYYY
+# the format codes can be found at:
+# https://help.gnome.org/users/gthumb/stable/gthumb-date-formats.html.en
+last-modified-at:
+    date-format: '%d-%m-%Y'
+
+# Social Links
+social_links:
+  - title: LinkedIn Profile
+    url: https://www.linkedin.com/in/BenSouchet/
+    fa_icon: fab fa-linkedin
+  - title: Github Profile
+    url: https://github.com/BenSouchet
+    fa_icon: fab fa-github
+  - title: Stack Overflow Profile
+    url: https://stackoverflow.com/users/10797718/ben-souchet
+    fa_icon: fab fa-stack-overflow
+  - title: Send me an E-mail
+    url: mailto:contact@bensouchet.dev?body=Hi%20Ben,%0D%0A%0D%0A
+    fa_icon: fas fa-at
 
 # Activate the ability to publish posts or collection documents with a future date
 future: true
@@ -38,10 +64,10 @@ primary_color_name: caribbean_green
 # Specifying a custom value will ignore 'primary_color_name'
 #primary_color_value: #1FD3A2
 
-# To see preview of the differents built-in colors check the wiki:
+# To see preview of the differents built-in colors check the wiki page:
 # TODO WIKI (THEN ADD URL HERE)
 
-# Specify which color scheme you want to use, built-in color schemes are:
+# Specify the default color scheme you want to use, built-in color schemes are:
 # light, dark, white, black
 color_scheme: dark
 # You can create you own color scheme and use it, check the wiki:
@@ -52,10 +78,10 @@ color_scheme: dark
 # Activating this module will ignore the 'color_scheme' your declared
 use_module_auto_color_scheme: true
 
-# Module only available if you enabled 'use_module_auto_color_scheme'
-# This module display a switch button on the right of the footer section,
-# With this switch you can select between the light and dark color scheme
-use_module_color_scheme_switch: true
+# only available if you enabled 'use_module_auto_color_scheme'
+# This option if set to true will add a switch button on the right of the footer section,
+# With this switch the visitor can select between the light and dark color scheme
+color_scheme_switch_visible: true
 
 # --------------------------- #
 # ---------- FONTS ---------- #
@@ -64,6 +90,7 @@ use_module_color_scheme_switch: true
 font_family_main: Source Sans 3
 # Optional: Specify the variable font family name (will be used on compatible browsers)
 font_family_main_variable: Source Sans 3 VF
+
 # Font family used for code formatting on HTML tags (<pre>, <code>, <kbd>, <samp>)
 font_family_code: Monaco
 # Enable Font Awesome (Boolean)
@@ -75,8 +102,9 @@ use_fontawesome: true
 # --------------------------- #
 # ---------- IMAGES --------- #
 
+# Images can be an absolute path or a relative path (relative to the './assets/css/' folder)
+
 # Path to the profile image
-# Can be an absolute path or a relative path (relative to the './assets/css/' folder)
 # The default value is the owner github profile picture
 path_profile_image: ../images/default/profile_image.jpg
 
@@ -120,10 +148,19 @@ collections:
   pages:
     output: true
     permalink: /:name
-    sort_by: page_index
+    sort_by: nav_page_index
+  staff_members:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
 
 # Sass/SCSS parameters
-# Use "expanded" for easy CSS debugging
+# Use "expanded" for CSS debugging
 # and "compressed" otherwise.
 sass:
   style: expanded
@@ -150,13 +187,10 @@ exclude:
   - docs/
   - gemfiles/
   - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+  - vendor/
   - CHANGELOG.md
   - CNAME
-  - dracaena-theme.gemspec
+  - cyathea-theme.gemspec
   - Gemfile
   - Gemfile.lock
   - LICENSE
@@ -165,7 +199,8 @@ exclude:
 
 # Jekyll plugins used by the theme
 plugins:
-  - "jekyll-github-metadata"
+  - jekyll-github-metadata
+  - jekyll-last-modified-at
 
 # Parent theme used in the build process
 theme: null

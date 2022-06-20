@@ -1,0 +1,16 @@
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	{% if site.font_family_main_variable == "Source Sans 3 VF" %}
+	<link href="{{ '/assets/fonts/sourcesans3/vf-roman.woff2' | relative_url }}" rel="preload" as="font" type="font/woff2" crossOrigin="anonymous">
+	<link href="{{ '/assets/fonts/sourcesans3/vf-italic.woff2' | relative_url }}" rel="preload" as="font" type="font/woff2" crossOrigin="anonymous">
+	{% endif %}
+	{% if site.use_fontawesome == true %}
+	<link href="{{ '/assets/fonts/fontawesome/fa-brands-400.woff2' | relative_url }}" rel="preload" as="font" type="font/woff2" crossOrigin="anonymous">
+	<link href="{{ '/assets/fonts/fontawesome/fa-regular-400.woff2' | relative_url }}" rel="preload" as="font" type="font/woff2" crossOrigin="anonymous">
+	<link href="{{ '/assets/fonts/fontawesome/fa-solid-900.woff2' | relative_url }}" rel="preload" as="font" type="font/woff2" crossOrigin="anonymous">
+	{% endif %}
+	<link href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" rel="stylesheet preload prefetch" as="style" type="text/css">
+	{% include head-custom.html %}
+</head>

@@ -1,9 +1,8 @@
 ---
-layout: default
+title: My website !!!
 subtitle: Here start the fun (maybe)
+nav_item: Home
 ---
-# My website !!!
-
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 There should be whitespace between paragraphs.

@@ -1,81 +1,27 @@
+---
+---
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-		{% if site.font_family_main_variable == "Source Sans 3 VF" %}
-		<link href="{{ '/assets/fonts/sourcesans3/vf-roman.woff2' | relative_url }}" rel="preload" as="font" type="font/woff2" crossOrigin="anonymous">
-		<link href="{{ '/assets/fonts/sourcesans3/vf-italic.woff2' | relative_url }}" rel="preload" as="font" type="font/woff2" crossOrigin="anonymous">
-		{% endif %}
-		{% if site.use_fontawesome == true %}
-		<link href="{{ '/assets/fonts/fontawesome/fa-brands-400.woff2' | relative_url }}" rel="preload" as="font" type="font/woff2" crossOrigin="anonymous">
-		<link href="{{ '/assets/fonts/fontawesome/fa-regular-400.woff2' | relative_url }}" rel="preload" as="font" type="font/woff2" crossOrigin="anonymous">
-		<link href="{{ '/assets/fonts/fontawesome/fa-solid-900.woff2' | relative_url }}" rel="preload" as="font" type="font/woff2" crossOrigin="anonymous">
-		{% endif %}
-		<link href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" rel="stylesheet preload prefetch" as="style" type="text/css">
-		{% include head-custom.html %}
-	</head>
+	{% include head.html %}
 	<body>
 		<a id="skip-to-content" href="#main-content">Go to the content.</a>
 		<a id="skip-to-navigation" href="#navigation">Go to navbar.</a>
 		<div id="profile-picture">
-			<a aria-label="Link to homepage" href="{{ site.github.url }}">
-				<svg viewBox="0 0 1 1"></svg>
-			</a>
+			<a aria-label="Link to homepage" href="{{ '/' | relative_url }}"><svg viewBox="0 0 1 1"></svg></a>
 		</div>
-		<header role="banner">
-			{% if site.github.is_user_page %}
-			{% assign fallback_site_title = site.github.owner.name %}
-			{% else %}
-			{% assign fallback_site_title = site.github.project_title %}
-			{% endif %}
-			<h1 aria-label="Site name"><a href="#">{{ site.title | default: fallback_site_title }}</a></h1>
-			<ul id="top-links" role="navigation" aria-label="Social links">
-				<li><a title="LinkedIn profile" target="_blank" rel="noopener external" href="#"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a></li>
-				<li><a title="Github profile" target="_blank" rel="noopener external" href="#"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a></li>
-				<li><a title="Stack Overflow profile" target="_blank" rel="noopener external" href="#"><i class="fab fa-stack-overflow fa-fw" aria-hidden="true"></i></a></li>
-				<li><a title="Send me an E-mail" target="_blank" rel="noopener external" href="#"><i class="fas fa-at fa-fw" aria-hidden="true"></i></a></li>
-			</ul>
-		</header>
-		<nav id="navigation" role="navigation" aria-label="Main">
-			<ul>
-				<li class="current-page"><a href="#" aria-current="page"><i class="fas fa-home fa-fw"></i><span>Home</span></a></li>
-				<li><a href="#"><i class="fas fa-laptop-code fa-fw" aria-hidden="true"></i><span>Projects</span></a></li>
-				<li><a href="#"><i class="far fa-address-card fa-fw" aria-hidden="true"></i><span>Resume</span></a></li>
-				<li><a href="#/"><i class="fas fa-envelope fa-fw" aria-hidden="true"></i><span>Contact</span></a></li>
-			</ul>
-		</nav>
+		{% include header.html %}
+		{% include navigation.html %}
 		<main id="main-content" role="main">
 			<!-- Or article tag if post -->
 			<section>
 				<hgroup>
 					<h1>{{ page.title }}</h1>
-					<h4>{{ page.subtitle }}</h4>
+					{% if page.subtitle %}<h4>{{ page.subtitle }}</h4>{% endif %}
 				</hgroup>
-				<div id="post-metadata">
-					<div id="post-creation-info">
-						<i class="fas fa-user-alt fa-fw" aria-hidden="true"></i>
-						<a class="author-name" href="https://css-tricks.com/author/chriscoyier/" rel="author">Cyathea Theme</a>
-						<span> on </span>
-						<time datetime="">Oct 1, 2018</time>
-					</div>
-					<div id="post-tags">
-						<a href="#" class="post-tag" title="" rel="tag">javascript</a>
-						<a href="#" class="post-tag" title="" rel="tag">web</a>
-					</div>
-				</div>
-				<div id="content">
-					{{ content }}
-				</div>
+				{% include metadata.html %}
+				<div id="content">{{ content }}</div>
 			</section>
 		</main>
-		<footer>
-			<span>&copy; {{ site.github.owner.name }}. All Rights Reserved.</span>
-			<div id="switch-theme">
-				<button value="light" role="button" type="button">Light</button>
-				<button value="dark" role="button" type="button" disabled>Dark</button>
-			</div>
-		</footer>
+		{% include footer.html %}
 	</body>
 </html>

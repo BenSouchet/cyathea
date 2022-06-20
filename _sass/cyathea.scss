@@ -13,7 +13,7 @@ html {
 body {
   display: grid;
   column-gap: $val-element-gap;
-  grid-template-columns: $val-left-column-width 1fr;
+  grid-template-columns: $val-left-column-width minmax(0, 1fr);
   grid-template-rows: auto auto 1fr auto;
   margin: 0 auto;
   max-width: 1100px;
@@ -24,17 +24,16 @@ h1, h2, h3, h4, h5, h6 {
     font-size: .86em;
   }
 }
-pre {
-  padding: .875em;
-  border-radius: 6px;// TODO calc
+pre.highlight {
+  border-radius: .375rem;
   background-color: $clr-page-bg;
 }
 blockquote {
   background-color: $clr-footer-bg;
   margin: 0;
   border-left: $val-border-size solid $clr-primary-d20;
-  padding: .5em .625em .5em 2.875em;
-  border-radius: 4px;// TODO calc
+  padding: .5rem .625rem .5rem 2.875rem;
+  border-radius: .25rem;
   &::before {
     content: "\201C";
     color: $clr-primary-d20;
@@ -54,6 +53,9 @@ blockquote {
     font-weight: bold;
     margin-block-end: .4em;
   }
+}
+table {
+  border-radius: .25rem;
 }
 #skip-to-content,
 #skip-to-navigation {
@@ -232,11 +234,19 @@ main {
   border-radius: 0 $val-rounded-corner 0 0;
   border: $val-border-size solid $clr-border;
   border-bottom-width: 0;
+  > section, > article {
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    border-radius: 0 $val-rounded-corner 0 0;
+  }
   hgroup {
     padding: 1.875rem $val-content-padding 1.25rem;
     background-color: $clr-hgroup-bg;
+    border-radius: 0 $val-rounded-corner 0 0;
     h1 {
-      font-size: 2.375rem;
+      font-size: 2.125rem;
       line-height: initial;
     }
     h4 {

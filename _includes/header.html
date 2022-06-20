@@ -1,0 +1,15 @@
+<header role="banner">
+	{% if site.github.is_user_page %}
+	{% assign fallback_site_title = site.github.owner.name %}
+	{% else %}
+	{% assign fallback_site_title = site.github.project_title %}
+	{% endif %}
+	<h1 aria-label="Site name"><a href="{{ '/' | relative_url }}">{{ site.title | default: fallback_site_title }}</a></h1>
+	{% if site.social_links %}
+	<ul id="top-links" role="navigation" aria-label="Social links">
+		{% for link in site.social_links %}
+		<li><a title="{{ link.title }}" target="_blank" rel="noopener external" href="{{ link.url }}"><i class="{{ link.fa_icon }} fa-fw" aria-hidden="true"></i></a></li>
+		{% endfor %}
+	</ul>
+	{% endif %}
+</header>
